@@ -28,10 +28,18 @@ class Router
         $method = $this->request->getMethods();
         $callback = $this->routesLists[$method][$path] ?? false;
         if ($callback === false) {
-            echo "No route found ! ";
+            return "No route found ! ";
             exit;
         }
 
-        echo call_user_func($callback);
+        if (is_string($callback)) {
+            return $this->renderView($callback);
+        }
+        return call_user_func($callback);
+    }
+
+    public function renderView($callback)
+    {
+        include_once __DIR__ . "/../../AppEngine/Views/$callback.twimm.php";
     }
 }
