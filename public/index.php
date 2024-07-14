@@ -7,8 +7,8 @@ use app\Protected\Core\AppCore;
 use app\AppEngine\Domains\Users\BusinessLogic\UserController;
 
 $app = new AppCore();
-$app->router->get("/", "home");
-$app->router->get("/get_users_list", [UserController::class, "userList"]);
+$app->router->get("/", "home");  //get a view directly by the name
+$app->router->get("/get_users_list", [UserController::class, "userList"]); //execute action from controller 
 
 
 $app->run();
