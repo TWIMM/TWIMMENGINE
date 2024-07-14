@@ -40,6 +40,10 @@ class Router
 
     public function renderView($callback)
     {
-        include_once __DIR__ . "/../../AppEngine/Views/$callback.twimm.php";
+        $htmlContent = file_get_contents(__DIR__ . "/../../AppEngine/Ressources/Views/$callback.twimm.php");
+        $layout =  file_get_contents(__DIR__ . "/../../AppEngine/Ressources/AppLayouts/home.layout.php");
+        $htmlContentPlaceHolded = str_replace('{{content}}', $htmlContent, $layout);
+
+        include_once $htmlContentPlaceHolded;
     }
 }
