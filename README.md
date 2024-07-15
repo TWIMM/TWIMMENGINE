@@ -84,6 +84,61 @@ By focusing on the core business logic and decoupling it from external concerns,
     php -S localhost:8000
     ```
 
-## Usage
+## Project Structure
 
-### Defining a Use Case
+The Clean Architecture PHP Framework follows a structured approach to organizing code that adheres to Clean Architecture principles. Below is an overview of the project structure:
+
+### Directory Layout
+
+- **AppEngine/**
+  - Contains the core repositories logic and business rules(Domains , AbstractClass , Api , Helpers, Ressources).
+
+  - **Domains/**
+    - Contains each Domain of our App each Domain conatins, businessLogic, migrations , presentations , usecases, entities, repositories, services.
+    - **BusinessLogic/**
+        - Contains each controller responsible of handling some forms of logic in our domain , pass data to presentation.
+    - **Entities/**
+        - Contains each entity responsible of handling the model of th domains and his childs. .
+    - **Migrations/**
+        - Contains migration files .
+    - **Presentation/**
+        - Contains code responsible of rendering the views after getting data from Business logic.
+    - **Repositories/**
+        - Contains code responsible of interact with database.
+    - **Services/**
+        - Contains code responsible of services.
+    - **UseCases/**
+        - Contains domain useCzses class.
+
+  - **AbstractClass/**
+    - Defines protected method used by Helpers methods
+
+  - **Api/**
+    - Implements Api call and Api return when views and presentation returns are not needed .
+
+  - **Helpers/**
+    - Implements Basic Function used by the presentation , and the business logic .
+
+  - **Ressource/**
+    - Contains views and layouts used by the presentations .
+
+- **public/**
+  - Entry point of the application accessible via web server.
+  - Contains front controllers and files.
+  - **index.php/**
+  - **Files/**
+
+- **Protected/Core/**
+  - Contains application-specific code who run the framworks , Don't touch unless you know what you are doing.
+  - **AppProtectedsCommands/**
+    - Handles app commande to generate entities , business logic controllers , services etc ...  .
+ 
+
+### Why This Structure?
+
+The structured approach facilitates:
+- **Separation of Concerns**: Each layer focuses on specific responsibilities, promoting code clarity and maintainability.
+- **Flexibility and Scalability**: Components are loosely coupled, allowing easy replacement or modification of parts without affecting the entire system.
+- **Testability**: Clear boundaries between layers make it easier to write unit tests and verify the correctness of each component independently.
+
+By adhering to Clean Architecture principles, the framework ensures your application remains adaptable, testable, and independent of external frameworks and infrastructure choices.
