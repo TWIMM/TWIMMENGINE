@@ -65,7 +65,7 @@ By focusing on the core business logic and decoupling it from external concerns,
 2. Install dependencies:
     ```bash
     composer install
-    cd public
+    
     ```
 
 3. Set up your environment variables:
@@ -75,6 +75,7 @@ By focusing on the core business logic and decoupling it from external concerns,
 
 4. Run the application:
     ```bash
+    cd public
     php -S localhost:8000
     ```
 
