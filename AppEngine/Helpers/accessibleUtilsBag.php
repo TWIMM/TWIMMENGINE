@@ -15,17 +15,22 @@ class AccessibleUtilsBag extends UtilsBag
 
     public function __construct()
     {
-        // Initialize $request and $response first
         $this->request = new Request();
         $this->response = new Response();
-
-        // Initialize $router after $request and $response
         $this->router = new Router($this->request, $this->response);
     }
 
     public function render($viewPath, $parameters)
     {
-        // Use $this->router to call renderView after initialization
         return $this->router->renderView($viewPath, $parameters);
+    }
+
+    public function getRequestBody()
+    {
+        $body = $this->request->getBody();
+
+        // Debugging: Print the request body data
+
+        return $body;
     }
 }

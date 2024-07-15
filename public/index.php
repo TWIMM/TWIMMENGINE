@@ -10,5 +10,6 @@ $app = new AppCore();
 $app->router->get("/", "home");  //get a view directly by the name   // good approche is $app->router->get("/",  [HomeController::class, "show"]);  
 $app->router->get("/get_users_list", [UserController::class, "userList"]); //execute action from controller 
 
+$app->router->post("/get_users_list", [UserController::class, "userList"]); //execute action from controller 
 
 $app->run();

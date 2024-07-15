@@ -20,7 +20,10 @@ class UserController extends AccessibleUtilsBag
 
     public function userList()
     {
-        $userLists = $this->getAllUsers();
-        echo $this->render("userlist", $userLists);
+        $requestBody = $this->getRequestBody();
+
+        // Debugging: Print the request body data
+
+        return $requestBody;
     }
 }
