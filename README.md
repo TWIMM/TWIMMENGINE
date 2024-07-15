@@ -84,6 +84,11 @@ By focusing on the core business logic and decoupling it from external concerns,
     php -S localhost:8000
     ```
 
+5. Need a entity for a specifific domain like Universities ? in the application (Example):
+    ```bash
+    php commandsloader create_entity entity_name domain_name
+    ```
+
 ## Project Structure
 
 The Clean Architecture PHP Framework follows a structured approach to organizing code that adheres to Clean Architecture principles. Below is an overview of the project structure:
