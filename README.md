@@ -134,11 +134,4 @@ The Clean Architecture PHP Framework follows a structured approach to organizing
     - Handles app commande to generate entities , business logic controllers , services etc ...  .
  
 
-### Why This Structure?
-
-The structured approach facilitates:
-- **Separation of Concerns**: Each layer focuses on specific responsibilities, promoting code clarity and maintainability.
-- **Flexibility and Scalability**: Components are loosely coupled, allowing easy replacement or modification of parts without affecting the entire system.
-- **Testability**: Clear boundaries between layers make it easier to write unit tests and verify the correctness of each component independently.
-
-By adhering to Clean Architecture principles, the framework ensures your application remains adaptable, testable, and independent of external frameworks and infrastructure choices.
+### Some utilis commands?

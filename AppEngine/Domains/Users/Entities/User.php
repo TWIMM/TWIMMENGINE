@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Entity;
+namespace  app\AppEngine\Domains\Users\Entities;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -14,7 +14,7 @@ class User
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    private $id;
+    private $id_user;
 
     // Example field
     /**

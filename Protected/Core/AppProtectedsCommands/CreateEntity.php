@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Protected\Core\AppProtectedsCommands;
+namespace app\Protected\Core\AppProtectedsCommands;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -45,6 +45,9 @@ class CreateEntity extends Command
 
         $entityName = $input->getArgument('name');
         $domainName = $input->getArgument('domain');
+        $lower_entity_name = strtolower($entityName);
+
+        $nameSpace = ' app\AppEngine\\Domains\\' . $domainName . '\\Entities';
 
         $fileSystem = new Filesystem();
 
@@ -52,7 +55,7 @@ class CreateEntity extends Command
         $entityContent = <<<EOT
         <?php
 
-        namespace App\Entity;
+        namespace $nameSpace;
 
         use Doctrine\ORM\Mapping as ORM;
 
@@ -66,7 +69,7 @@ class CreateEntity extends Command
              * @ORM\GeneratedValue
              * @ORM\Column(type="integer")
              */
-            private \$id;
+            private \$id_$lower_entity_name;
 
             // Example field
             /**
