@@ -1,44 +1,3 @@
-## Project Structure
-
-The Clean Architecture PHP Framework follows a structured approach to organizing code that adheres to Clean Architecture principles. Below is an overview of the project structure:
-
-```plaintext
-TWIMMENGINE/
-├── AppEngine/
-│   ├── AbstractClass/
-│   ├── Api/
-│   ├── Domains/
-│   │   └── Users/
-│   │       ├── BusinessLogic/
-│   │       ├── Entities/
-│   │       ├── Migrations/
-│   │       ├── Presentation/
-│   │       ├── Repositories/
-│   │       ├── Services/
-│   │       └── UseCases/
-│   ├── Helpers/
-│   └── Ressources/
-├── Protected/
-│   └── Core/
-│       ├── AppProtectedsCommands/
-│       │   ├── AppCore.php
-│       │   ├── Request.php
-│       │   ├── Response.php
-│       │   ├── Router.php
-│       │   └── Session.php
-├── public/
-│   ├── Files/
-│   └── index.php
-├── vendor/
-├── .gitignore
-├── commandsloader
-├── composer.json
-├── composer.lock
-├── LICENSE
-└── README.md
-
-
-
 # Clean Architecture PHP Framework
 
 Welcome to the Clean Architecture PHP Framework project! This framework is designed to facilitate the development of scalable and maintainable PHP applications using the principles of Clean Architecture, as opposed to the traditional MVC (Model-View-Controller) pattern. Clean Architecture emphasizes separation of concerns, decoupling of components, and flexibility, making it ideal for large projects and long-term scalability.
@@ -174,5 +133,41 @@ The Clean Architecture PHP Framework follows a structured approach to organizing
   - **AppProtectedsCommands/**
     - Handles app commande to generate entities , business logic controllers , services etc ...  .
  
+## Project Markdown
 
-### Some utilis commands?
+The Clean Architecture PHP Framework follows a structured approach to organizing code that adheres to Clean Architecture principles. Below is an overview of the project structure:
+
+```plaintext
+TWIMMENGINE/
+├── AppEngine/
+│   ├── AbstractClass/
+│   ├── Api/
+│   ├── Domains/
+│   │   └── Users/
+│   │       ├── BusinessLogic/
+│   │       ├── Entities/
+│   │       ├── Migrations/
+│   │       ├── Presentation/
+│   │       ├── Repositories/
+│   │       ├── Services/
+│   │       └── UseCases/
+│   ├── Helpers/
+│   └── Ressources/
+├── Protected/
+│   └── Core/
+│       ├── AppProtectedsCommands/
+│       │   ├── AppCore.php
+│       │   ├── Request.php
+│       │   ├── Response.php
+│       │   ├── Router.php
+│       │   └── Session.php
+├── public/
+│   ├── Files/
+│   └── index.php
+├── vendor/
+├── .gitignore
+├── commandsloader
+├── composer.json
+├── composer.lock
+├── LICENSE
+└── README.md
