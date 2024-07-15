@@ -2,44 +2,26 @@
 
 namespace app\AppEngine\AbstractClass;
 
+use Twig\Loader\FilesystemLoader;
+use Twig\Environment;
 
 class UtilsBag
 {
-    // change echo function to {{}} for more readability
+    private Environment $twig;
 
-    protected function processTemplateVariables($content, $params)
+    public function __construct()
     {
-        return preg_replace_callback(
-            '/\{\{\s*\$(\w+)\s*\}\}/',
-            function ($matches) use ($params) {
-                $variableName = $matches[1];
-                return isset($params[$variableName]) ? htmlspecialchars($params[$variableName], ENT_QUOTES, 'UTF-8') : '';
-            },
-            $content
-        );
+        // Initialize Twig
+        $loader = new FilesystemLoader([__DIR__ . '/../../AppEngine/Ressources/Views', __DIR__ . '/../../AppEngine/Ressources/AppLayouts']);
+        $this->twig = new Environment($loader, [
+            'cache' => __DIR__ . '/../../AppEngine/Ressources/Cache',
+            'debug' => true,
+        ]);
     }
 
-    protected function renderView($viewName, $params =  ["Admin" => "TWIMM"])
+    protected function renderView($viewName, $params = ["Admin" => "TWIMM"])
     {
-        return $this->includeRequiredPageInLayout($viewName, "home", $params);
-    }
-
-    protected function includeRequiredPageInLayout($viewName, $layout, $params)
-    {
-        // Extract the parameters into individual variables
-        extract($params);
-
-        // Capture the view's HTML content
-        ob_start();
-        include __DIR__ . "/../../AppEngine/Ressources/Views/$viewName.twimm.php";
-        $htmlContent = ob_get_clean();
-
-        // Capture the layout's HTML content
-        $layoutContent = file_get_contents(__DIR__ . "/../../AppEngine/Ressources/AppLayouts/$layout.layout.php");
-        $htmlContent = $this->processTemplateVariables($htmlContent, $params);
-        // Replace the placeholder with the view content
-        $htmlContentPlaceHolded = str_replace('{{content}}', $htmlContent, $layoutContent);
-
-        return $htmlContentPlaceHolded;
+        // Render the view with Twig
+        return $this->twig->render($viewName . '.twimm.php', $params);
     }
 }

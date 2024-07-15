@@ -18,6 +18,7 @@ class Router extends UtilsBag
 
     public function __construct(Request $request, Response $response)
     {
+        parent::__construct();
         $this->request = $request;
         $this->response = $response;
     }
