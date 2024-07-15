@@ -79,7 +79,7 @@ class CreateEntity extends Command
 
             public function getId(): ?int
             {
-                return \$this->id;
+                return \$this->id_$lower_entity_name;
             }
 
             public function getFieldName(): ?string
