@@ -5,6 +5,8 @@ namespace app\AppEngine\AbstractClass;
 
 class UtilsBag
 {
+    // change echo function to {{}} for more readability
+
     protected function processTemplateVariables($content, $params)
     {
         return preg_replace_callback(

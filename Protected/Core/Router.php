@@ -59,10 +59,4 @@ class Router extends UtilsBag
         }
         return call_user_func($callback);
     }
-
-
-
-    // change echo function to {{}} for more readability
-
-
 }
