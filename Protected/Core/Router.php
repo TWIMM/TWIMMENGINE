@@ -5,7 +5,9 @@ namespace app\Protected\Core;
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 
-class Router
+use app\AppEngine\AbstractClass\UtilsBag;
+
+class Router extends UtilsBag
 {
 
 
@@ -58,42 +60,9 @@ class Router
         return call_user_func($callback);
     }
 
-    public function renderView($viewName, $params =  ["Admin" => "TWIMM"])
-    {
-        return $this->includeRequiredPageInLayout($viewName, "home", $params);
-    }
-
-    public function includeRequiredPageInLayout($viewName, $layout, $params)
-    {
-        // Extract the parameters into individual variables
-        extract($params);
-
-        // Capture the view's HTML content
-        ob_start();
-        include __DIR__ . "/../../AppEngine/Ressources/Views/$viewName.twimm.php";
-        $htmlContent = ob_get_clean();
-
-        // Capture the layout's HTML content
-        $layoutContent = file_get_contents(__DIR__ . "/../../AppEngine/Ressources/AppLayouts/$layout.layout.php");
-        $htmlContent = $this->processTemplateVariables($htmlContent, $params);
-        // Replace the placeholder with the view content
-        $htmlContentPlaceHolded = str_replace('{{content}}', $htmlContent, $layoutContent);
-
-        return $htmlContentPlaceHolded;
-    }
 
 
     // change echo function to {{}} for more readability
 
-    private function processTemplateVariables($content, $params)
-    {
-        return preg_replace_callback(
-            '/\{\{\s*\$(\w+)\s*\}\}/',
-            function ($matches) use ($params) {
-                $variableName = $matches[1];
-                return isset($params[$variableName]) ? htmlspecialchars($params[$variableName], ENT_QUOTES, 'UTF-8') : '';
-            },
-            $content
-        );
-    }
+
 }
