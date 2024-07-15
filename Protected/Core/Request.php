@@ -46,11 +46,17 @@ class Request
             if (strpos($contentType, 'application/json') !== false) {
                 // Decode JSON body
                 $jsonContent = json_decode($request->getContent(), true);
-                return $jsonContent ?? [];
+                return ["data" => $jsonContent, "files" => []] ?? [];
             } else {
                 // Handle form data
-                return $request->request->all();
+                if ($request->files) {
+                    return  ["data" => $request->request->all(), "files" =>  $request->files];
+                } else {
+                    return  ["data" => $request->request->all(), "files" => []];
+                }
             }
         }
+
+        return ["data" => [], "files" => []];
     }
 }

@@ -24,6 +24,8 @@ class UserController extends AccessibleUtilsBag
 
         // Debugging: Print the request body data
 
+        //if want to check file uploaded , check count($requestBody['files]) directly
+
         return $requestBody;
     }
 }
