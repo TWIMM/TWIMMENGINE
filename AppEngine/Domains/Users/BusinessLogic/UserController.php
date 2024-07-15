@@ -2,9 +2,10 @@
 
 namespace app\AppEngine\Domains\Users\BusinessLogic;
 
+use app\AppEngine\Helpers\AccessibleUtilsBag;
 use app\Protected\Core\Response;
 
-class UserController
+class UserController extends AccessibleUtilsBag
 {
     public Response $ResponseJson;
 
