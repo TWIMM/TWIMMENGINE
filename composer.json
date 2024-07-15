@@ -15,7 +15,8 @@
         "php-di/php-di": "^7.0",
         "symfony/http-foundation": "^7.1",
         "twig/twig": "^3.10",
-        "symfony/console": "^7.1"
+        "symfony/console": "^7.1",
+        "symfony/filesystem": "^7.1"
     },
     "autoload": {
         "psr-4": {
