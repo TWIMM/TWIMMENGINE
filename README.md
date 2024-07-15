@@ -14,13 +14,6 @@ Welcome to the Clean Architecture PHP Framework project! This framework is desig
 
 ## Introduction
 
-This framework is built with Clean Architecture principles to ensure that your application is:
-- Independent of frameworks
-- Testable
-- Independent of UI
-- Independent of databases
-- Independent of any external agency
-
 By focusing on the core business logic and decoupling it from external concerns, this framework ensures that your codebase remains clean, maintainable, and scalable.
 
 ## Why Clean Architecture?
