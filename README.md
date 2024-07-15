@@ -59,12 +59,13 @@ By focusing on the core business logic and decoupling it from external concerns,
 1. Clone the repository:
     ```bash
     git clone https://github.com/TWIMM/TWIMMENGINE.git
-    cd TWIMMENGINE/public
+    cd TWIMMENGINE/
     ```
 
 2. Install dependencies:
     ```bash
     composer install
+    cd public
     ```
 
 3. Set up your environment variables:
