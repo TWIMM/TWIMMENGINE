@@ -1,6 +1,6 @@
 <?php
 
-namespace app\AppEngine\Domains\Users\Entities;
+namespace app\AppEngine\Domains\AgencesDeVoyages\Entities;
 
 use Doctrine\ORM\Mapping\Column;
 use Doctrine\ORM\Mapping\Entity;
