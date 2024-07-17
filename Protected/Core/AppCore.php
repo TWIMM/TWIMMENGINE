@@ -27,8 +27,8 @@ class AppCore
 
     public function run()
     {
-        //   echo $this->router->resolve();  //display web 
-        print_r($this->router->resolve());   //dsplay api & web
+        echo $this->router->resolve();  //display web 
+        //print_r($this->router->resolve());   //dsplay api & web
         //return $this->router->resolve();  //display api 
 
     }

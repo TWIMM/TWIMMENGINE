@@ -20,12 +20,14 @@ class UserController extends AccessibleUtilsBag
 
     public function userList()
     {
-        $requestBody = $this->getRequestBody();
+        //  $requestBody = $this->getRequestBody();
 
         // Debugging: Print the request body data
 
         //if want to check file uploaded , check count($requestBody['files]) directly
 
-        return $requestBody;
+        // return $requestBody;
+
+        return $this->renderView("userlist", ['Admin' => "Admin"]);
     }
 }
