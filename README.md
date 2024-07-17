@@ -86,8 +86,9 @@ By focusing on the core business logic and decoupling it from external concerns,
 6. Need to use react as temlate engine for complex UI directly in TWIMM PHP ?  (Example):
     ## Look the sample ReactComponents to see how to setup that
     ## If you don't have knowledge to use webpack for bundling and generate bundle skip and use twig template or build API to serve separated react app
+    ## Webpack and babel are used to bundle your react compenent and asset in one entry point who is used in the twig template to be rendered and hydrated , without that app will load slowly with bad perfomence 
 
-   ```
+
 7. Need to Generate a migration file ?  (Example):
 
 ## Project Structure
