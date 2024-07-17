@@ -83,7 +83,9 @@ By focusing on the core business logic and decoupling it from external concerns,
     ```bash
     php commandsloader create_entity entity_name domain_name
     ```
-
+5. Need to use react as temlate engine for complex UI directly in TWIMM PHP ?  (Example):
+    ## Look the sample ReactComponents to see how to setup that
+    ## If you don't have knowledge to use webpack for bundling and generate bundle skip and use twig template or build API to serve separated react app
 ## Project Structure
 
 The Clean Architecture PHP Framework follows a structured approach to organizing code that adheres to Clean Architecture principles. Below is an overview of the project structure:

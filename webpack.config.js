@@ -1,3 +1,6 @@
+//webpack exemple to bundle React compoenent and use the bundle in public folder for view  here images are stored in img so img will be replicated in your dist/img
+
+
 const path = require('path');
 
 module.exports = {
