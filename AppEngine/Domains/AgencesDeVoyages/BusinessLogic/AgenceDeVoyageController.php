@@ -6,7 +6,7 @@ use app\AppEngine\Helpers\AccessibleUtilsBag;
 use app\AppEngine\Domains\Users\UseCases\GetAllUsers;
 use app\Protected\Core\Response;
 
-class UserController extends AccessibleUtilsBag
+class AgenceDeVoyageController extends AccessibleUtilsBag
 {
     use GetAllUsers;
 
@@ -18,14 +18,16 @@ class UserController extends AccessibleUtilsBag
         $this->ResponseJson = $response;
     }
 
-    public function userList()
+    public function getHome()
     {
-        $requestBody = $this->getRequestBody();
+        //  $requestBody = $this->getRequestBody();
 
         // Debugging: Print the request body data
 
         //if want to check file uploaded , check count($requestBody['files]) directly
 
-        return $requestBody;
+        // return $requestBody;
+
+        return $this->renderView("home", ['Admin' => "Admin"]);
     }
 }
