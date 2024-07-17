@@ -40,8 +40,10 @@ class Router extends UtilsBag
         $method = $this->request->getMethods();
         $callback = $this->routesLists[$method][$path] ?? false;
         if ($callback === false) {
-            $this->response->setStatusCode(404);
-            return $this->renderView('route_not_found');
+            // $this->response->setStatusCode(404);
+            //send all request to react app base file loader index.html to solve 
+            //if dnt need or dont using react template just display 404 page aka route_not_found.twimm.php
+            return $this->renderView('home');
             exit;
         }
 
