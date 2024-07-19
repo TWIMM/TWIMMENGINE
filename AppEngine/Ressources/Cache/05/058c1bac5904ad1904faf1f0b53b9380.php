@@ -47,7 +47,12 @@ class __TwigTemplate_76a60118fb73d480b700b6efecdf8b99 extends Template
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
-        yield "<div id=\"root\"></div>
+        yield "<style>
+    #root {
+        overflow-x: hidden;
+    }
+</style>
+<div id=\"root\"></div>
 <!-- Charge notre composant React -->
 <script src=\"https://unpkg.com/react@18/umd/react.development.js\" crossorigin></script>
 <script src=\"https://unpkg.com/react-dom@18/umd/react-dom.development.js\" crossorigin></script>
@@ -87,6 +92,11 @@ class __TwigTemplate_76a60118fb73d480b700b6efecdf8b99 extends Template
         return new Source("{% extends \"home.layout.php\" %}
 
 {% block content %}
+<style>
+    #root {
+        overflow-x: hidden;
+    }
+</style>
 <div id=\"root\"></div>
 <!-- Charge notre composant React -->
 <script src=\"https://unpkg.com/react@18/umd/react.development.js\" crossorigin></script>

@@ -1,6 +1,11 @@
 {% extends "home.layout.php" %}
 
 {% block content %}
+<style>
+    #root {
+        overflow-x: hidden;
+    }
+</style>
 <div id="root"></div>
 <!-- Charge notre composant React -->
 <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>

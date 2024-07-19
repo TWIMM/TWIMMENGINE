@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import '../CSS/Carousel.css'
-import Logo from '../img/sticky-logo.png'
-import Logo2 from '../img/logo.png'
+import Logo from '../img/faviconsvg.svg'
+import Logo2 from '../img/faviconsvg.svg'
 import SendSharpIcon from '@mui/icons-material/SendSharp'
 import { useNavigate } from 'react-router-dom';
 
@@ -35,8 +35,8 @@ function Headerbutton() {
 
    return (
       <div className={headerClass} >
-         <img className='logo1' style={{ width: '10%' }} src={Logo} />
-         <img className='logo2' style={{ width: '10%' }} src={Logo2} />
+         <img className='logo1' style={{ width: '3%' }} src={"Files/faviconsvg.svg"} />
+         <img className='logo2' style={{ width: '3%' }} src={"Files/faviconsvg.svg"} />
 
          <div className='butlistone' >
 

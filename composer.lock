@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "804497041a8eade1bfebeb29be73586e",
+    "content-hash": "7601694de89a134b4d9230070b45d6b7",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -1309,6 +1309,61 @@
                 }
             ],
             "time": "2023-12-03T20:05:35+00:00"
+        },
+        {
+            "name": "inertiajs/inertia-laravel",
+            "version": "v0.2.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/inertiajs/inertia-laravel.git",
+                "reference": "ef618736fb566e5c85d862fa0cf6061422f19046"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/inertiajs/inertia-laravel/zipball/ef618736fb566e5c85d862fa0cf6061422f19046",
+                "reference": "ef618736fb566e5c85d862fa0cf6061422f19046",
+                "shasum": ""
+            },
+            "require-dev": {
+                "orchestra/testbench": "~3.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Inertia\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "./helpers.php"
+                ],
+                "psr-4": {
+                    "Inertia\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Reinink",
+                    "email": "jonathan@reinink.ca",
+                    "homepage": "https://reinink.ca"
+                }
+            ],
+            "description": "The Laravel adapter for Inertia.js.",
+            "keywords": [
+                "inertia",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/inertiajs/inertia-laravel/issues",
+                "source": "https://github.com/inertiajs/inertia-laravel/tree/master"
+            },
+            "time": "2020-02-28T14:50:19+00:00"
         },
         {
             "name": "laravel/serializable-closure",

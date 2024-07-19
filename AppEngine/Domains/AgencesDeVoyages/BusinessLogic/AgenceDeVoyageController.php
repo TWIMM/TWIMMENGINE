@@ -5,6 +5,7 @@ namespace app\AppEngine\Domains\AgencesDeVoyages\BusinessLogic;
 use app\AppEngine\Helpers\AccessibleUtilsBag;
 use app\AppEngine\Domains\Users\UseCases\GetAllUsers;
 use app\Protected\Core\Response;
+use Inertia\Inertia;
 
 class AgenceDeVoyageController extends AccessibleUtilsBag
 {
@@ -28,6 +29,13 @@ class AgenceDeVoyageController extends AccessibleUtilsBag
 
         // return $requestBody;
 
-        return $this->renderView("home", ['Admin' => "Admin"]);
+        //return $this->renderView("home", ['Admin' => "Admin"]);
+
+
+        return Inertia::render('Home', [
+            'data' => [
+                'message' => 'Hello, World!'
+            ]
+        ]);
     }
 }

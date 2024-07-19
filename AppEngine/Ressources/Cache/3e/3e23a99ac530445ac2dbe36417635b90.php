@@ -43,17 +43,23 @@ class __TwigTemplate_db58d2fbe3d845fd8946ef662b2f731f extends Template
   <!-- Required meta tags -->
   <meta charset=\"utf-8\">
   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">
+  <link rel=\"icon\" type=\"image/x-icon\" href=\"Files/faviconsvg.svg\">
 
   <!-- Bootstrap CSS -->
 
-  <title>Twimm PHP</title>
+  <title>Swap Money</title>
 </head>
+<style>
+  body {
+    overflow-x: hidden;
+  }
+</style>
 
 <body>
   ";
-        // line 15
+        // line 21
         yield from $this->unwrap()->yieldBlock('content', $context, $blocks);
-        // line 16
+        // line 22
         yield "  <!-- Optional JavaScript; choose one of the two! -->
   <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
 
@@ -63,7 +69,7 @@ class __TwigTemplate_db58d2fbe3d845fd8946ef662b2f731f extends Template
         return; yield '';
     }
 
-    // line 15
+    // line 21
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -83,7 +89,7 @@ class __TwigTemplate_db58d2fbe3d845fd8946ef662b2f731f extends Template
      */
     public function getDebugInfo()
     {
-        return array (  67 => 15,  57 => 16,  55 => 15,  39 => 1,);
+        return array (  73 => 21,  63 => 22,  61 => 21,  39 => 1,);
     }
 
     public function getSourceContext()
@@ -95,11 +101,17 @@ class __TwigTemplate_db58d2fbe3d845fd8946ef662b2f731f extends Template
   <!-- Required meta tags -->
   <meta charset=\"utf-8\">
   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">
+  <link rel=\"icon\" type=\"image/x-icon\" href=\"Files/faviconsvg.svg\">
 
   <!-- Bootstrap CSS -->
 
-  <title>Twimm PHP</title>
+  <title>Swap Money</title>
 </head>
+<style>
+  body {
+    overflow-x: hidden;
+  }
+</style>
 
 <body>
   {% block content %}{% endblock %}
