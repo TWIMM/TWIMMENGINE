@@ -1,4 +1,4 @@
-import React, { useEffect, useState }  from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Carousel from './Carousel'
 import SearchComponent from './SearchComponent'
@@ -14,40 +14,40 @@ import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward'
 
 export default function Acceuil() {
 
-  const [isScrolling , setIsScrolling] = useState(false)
-  const [headerClass , setHeaderClass] = useState('inactivearrow');
+  const [isScrolling, setIsScrolling] = useState(false)
+  const [headerClass, setHeaderClass] = useState('inactivearrow');
 
-  const handleScroll = ()=>{
-     if(window.scrollY > 100){
-        setIsScrolling(true)
-        setHeaderClass('activearrow')
-     } else if(window.scrollY < 100){
-        setHeaderClass('inactivearrow')
-     }
+  const handleScroll = () => {
+    if (window.scrollY > 100) {
+      setIsScrolling(true)
+      setHeaderClass('activearrow')
+    } else if (window.scrollY < 100) {
+      setHeaderClass('inactivearrow')
+    }
   }
 
-  const scrollToTop = ()=>{
+  const scrollToTop = () => {
     window.scrollTo({
-      top:0, 
-      behavior:'smooth',
+      top: 0,
+      behavior: 'smooth',
     })
   }
 
 
-  useEffect(()=>{
-    window.addEventListener('scroll' ,handleScroll)
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
 
-    return ()=>{
-     window.removeEventListener('scroll' , handleScroll)
-    } 
-  } , [isScrolling])
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [isScrolling])
 
 
   return (
     <div className=''>
       <Carousel />
-      
-      
+
+
       <div className='containsearchpart'>
         <SearchComponent />
       </div>
@@ -60,19 +60,19 @@ export default function Acceuil() {
         <AboutUs />
       </div>
 
-      <div style={{marginBottom:'5%'}}  className='containbody'>
+      <div style={{ marginBottom: '5%' }} className='containbody'>
         <Moreroom />
       </div>
 
-      <div style={{marginBottom:'5%'}}  className='containbody'>
+      <div style={{ marginBottom: '5%' }} className='containbody'>
         <Review />
       </div>
 
-      <div style={{marginBottom:'5%'}}  className='containbody'>
+      <div style={{ marginBottom: '5%' }} className='containbody'>
         <Blog />
       </div>
 
-      <div style={{marginBottom:'5%'}}  className='containbody'>
+      <div style={{ marginBottom: '5%' }} className='containbody'>
         <Newsletter />
       </div>
 
@@ -80,11 +80,11 @@ export default function Acceuil() {
         <Footer />
       </div>
 
-      <div onClick={scrollToTop}  style={{ position:'fixed' , backgroundColor:'rgb(236, 159, 6)' , zIndex:'3' , left:'20px', bottom:'20px'}} className={headerClass}> 
-    
-        <ArrowUpwardIcon sx={{color:'white'}}/>
-        
-      </div>  
+      <div onClick={scrollToTop} style={{ position: 'fixed', backgroundColor: 'rgb(236, 159, 6)', zIndex: '3', left: '20px', bottom: '20px' }} className={headerClass}>
+
+        <ArrowUpwardIcon sx={{ color: 'white' }} />
+
+      </div>
 
     </div>
   )

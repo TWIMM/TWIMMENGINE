@@ -1,34 +1,47 @@
-import React , {useState , useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import Acceuil from './Components/Acceuil'
 import AccueilMobile from './Mobilecomponents/AccueilMobile';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchData } from '../../../JSGetterService/JSGetterSliceForYourRedux';
 
 function Appcomponent() {
+    const dispatch = useDispatch();
+    const data = useSelector((state) => state.data.items);
+    const status = useSelector((state) => state.data.status);
+    const error = useSelector((state) => state.data.error);
 
-    const [windowSize , setSize] = useState({
-        width:window.innerWidth,
-        height:window.innerHeight
+    useEffect(() => {
+        if (status === 'idle') {
+            dispatch(fetchData("tickets"));
+        } else {
+            console.log(data);
+        }
+    }, [status, dispatch]);
+    const [windowSize, setSize] = useState({
+        width: window.innerWidth,
+        height: window.innerHeight
     });
 
-    const handleResize =()=> {
+    const handleResize = () => {
         setSize({
-            width:window.innerWidth,
-            height:window.innerHeight
+            width: window.innerWidth,
+            height: window.innerHeight
         })
 
         console.log(windowSize)
     }
 
-    useEffect(()=> {
-        window.addEventListener('resize' , handleResize)
-    } , [])
+    useEffect(() => {
+        window.addEventListener('resize', handleResize)
+    }, [])
 
-    if(windowSize.width >= 1250){
-        return   <Acceuil/>
+    if (windowSize.width >= 1250) {
+        return <Acceuil />
     } else {
-        return   <AccueilMobile/>
+        return <AccueilMobile />
     }
 
- 
+
 }
 
 export default Appcomponent

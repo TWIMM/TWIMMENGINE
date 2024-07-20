@@ -87,9 +87,15 @@ By focusing on the core business logic and decoupling it from external concerns,
     ## Look the sample ReactComponents to see how to setup that
     ## If you don't have knowledge to use webpack for bundling and generate bundle skip and use twig template or build API to serve separated react app
     ## Webpack and babel are used to bundle your react compenent and asset in one entry point who is used in the twig template to be rendered and hydrated , without that app will load slowly with bad perfomence 
+    ## Write your componenents following our example and bundle it to have an entry point  that can be used in the home twig file to display the app 
+
+7. TWIMMENGINE setups a getter service in JS to help you get data from all your controller to your react component  (Example):
+    ## Add the JSGetterSliceForYourRedux slice in your redux store , if you dont have one you must setup one in your app directory.
+    ## Import the fecthData() helper in your component and pass him the route to the controller you want to get data from 
+   
 
 
-7. Need to Generate a migration file ?  (Example):
+8. Need to Generate a migration file ?  (Example):
 
 ## Project Structure
 

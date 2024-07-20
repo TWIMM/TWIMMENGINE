@@ -7,17 +7,19 @@ import Acceuil from './Components/Acceuil';
 import Appcomponent from './Appcomponent';
 import Destinations from './Mobilecomponents/Destinations'
 
+
 function App() {
+
   return (
- 
-    <Provider store={store}>  
-     <Routes>
+
+    <Provider store={store}>
+      <Routes>
         <Route path='/' element={< Appcomponent />} />
         <Route path='/destinations' element={< Destinations />} />
 
-     </Routes>
+      </Routes>
     </Provider>
-  
+
   );
 }
 

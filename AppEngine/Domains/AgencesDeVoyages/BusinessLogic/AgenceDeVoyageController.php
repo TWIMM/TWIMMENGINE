@@ -29,13 +29,6 @@ class AgenceDeVoyageController extends AccessibleUtilsBag
 
         // return $requestBody;
 
-        //return $this->renderView("home", ['Admin' => "Admin"]);
-
-
-        return Inertia::render('Home', [
-            'data' => [
-                'message' => 'Hello, World!'
-            ]
-        ]);
+        return $this->renderView("home", ['Admin' => "Admin"]);
     }
 }
