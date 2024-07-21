@@ -8,7 +8,7 @@ export const fetchData = createAsyncThunk('data/fetchData', async (param) => {
     if (!response.ok) {
         throw new Error('Network response was not ok');
     }
-    return response.text();
+    return response.json();
 });
 
 // Create the slice

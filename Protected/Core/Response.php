@@ -9,10 +9,10 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 class Response
 {
 
-    public static function returnJSONResponse($data)
+    public static function returnJSONResponse($data, $statusCode)
     {
 
-        $response = new JsonResponse($data);
+        $response = new JsonResponse($data, $statusCode);
 
         return $response;
     }

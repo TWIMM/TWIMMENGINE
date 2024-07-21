@@ -9,7 +9,7 @@ use app\AppEngine\Domains\Users\BusinessLogic\UserController;
 
 $app = new AppCore();
 $app->router->get("/", [AgenceDeVoyageController::class, "getHome"]);  //get a view directly by the name   // good approche is $app->router->get("/",  [HomeController::class, "show"]);  
-$app->router->get("/get_users_list", [UserController::class, "userList"]); //execute action from controller 
+$app->router->get("/tickets", [AgenceDeVoyageController::class, "ticketsList"]); //execute action from controller 
 
 //$app->router->get("/get_destinationlist", [AgenceDeVoyageController::class, "getHome"]); //execute action from controller 
 

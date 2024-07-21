@@ -16,7 +16,7 @@ function Appcomponent() {
         } else {
             console.log(data);
         }
-    }, [status, dispatch]);
+    }, [status, data]);
     const [windowSize, setSize] = useState({
         width: window.innerWidth,
         height: window.innerHeight

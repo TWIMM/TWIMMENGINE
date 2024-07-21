@@ -31,4 +31,11 @@ class AgenceDeVoyageController extends AccessibleUtilsBag
 
         return $this->renderView("home", ['Admin' => "Admin"]);
     }
+
+    public function ticketsList()
+    {
+        return  $this->ResponseJson->returnJSONResponse([
+            "PCS", "Transcash", "Google card", "Apple card"
+        ], 200);
+    }
 }

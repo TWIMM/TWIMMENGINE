@@ -1,23 +1,23 @@
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 767px) {
   @keyframes movetonext {
     from {
       transform: scale(2);
     }
-  
-    to{
+
+    to {
       transform: scale(1.5)
     }
   }
-  
-  
+
+
   @keyframes moveToRight {
     0% {
       transform: translateX(-10%);
-      opacity:0.2
+      opacity: 0.2
     }
-  
-    100%{
-      transform: translateX(30px); 
+
+    100% {
+      transform: translateX(30px);
       opacity: 0.9;
     }
   }
@@ -25,11 +25,11 @@
   @keyframes slideOne {
     0% {
       transform: translateX(0px);
-      opacity:0.3
+      opacity: 0.3
     }
-  
-    100%{
-      transform: translateX(30px); 
+
+    100% {
+      transform: translateX(30px);
       opacity: 0.9;
     }
   }
@@ -37,39 +37,40 @@
 
   @keyframes changeBackground {
     0% {
-      background-image: url('../img/8.png');
+      background-image: url('../img/bullseye-gradient.png');
     }
 
     100% {
-      background-image: url('../img/4.png');
+      background-image: url('../img/bullseye-gradient.png');
     }
 
- 
+
   }
 
 
 
   @keyframes changeBackgroundimg0 {
     0% {
-      background-image: url('../img/4.png');
+      background-image: url('../img/bullseye-gradient.png');
     }
 
     100% {
-      background-image: url('../img/8.png');
+      background-image: url('../img/bullseye-gradient.png');
     }
 
- 
+
   }
 
- 
+
 
   @keyframes changeColor {
-    from{
+    from {
       background-color: rgb(238, 168, 56);
       width: 0%;
       height: 3px;
     }
-    to{
+
+    to {
       background-color: rgb(238, 168, 56);
       width: 100%;
       height: 3px;
@@ -77,13 +78,14 @@
   }
 
 
-  @keyframes changeColor2{
-    from{
+  @keyframes changeColor2 {
+    from {
       background-color: rgb(238, 168, 56);
       width: 0%;
       height: 2px;
     }
-    to{
+
+    to {
       background-color: rgb(238, 168, 56);
       width: 80%;
       height: 2px;
@@ -91,55 +93,61 @@
   }
 
   @keyframes waveAnimation {
-    0% , 100% {
+
+    0%,
+    100% {
       transform: scale(1.2);
-       background-color: rgba(255,255, 255, 0.1);
+      background-color: rgba(255, 255, 255, 0.1);
     }
 
-    50%{
+    50% {
       transform: scale(0.8);
-      background-color: rgba(255,255, 255, 0.4);
+      background-color: rgba(255, 255, 255, 0.4);
     }
   }
 
-  @keyframes moveControlButtonToLeft{
-    from{
+  @keyframes moveControlButtonToLeft {
+    from {
       opacity: 0.1;
     }
-    to{
+
+    to {
       opacity: 0.9;
     }
   }
 
 
-  @keyframes goBack1{
-    from{
+  @keyframes goBack1 {
+    from {
       opacity: 0.9;
     }
-    to{
+
+    to {
       opacity: 0.1;
     }
   }
 
-  @keyframes comewithsmooth{
+  @keyframes comewithsmooth {
     from {
       background: transparent;
 
     }
+
     to {
       background: white;
-      
+
     }
   }
 
-  @keyframes gowithsmooth{
+  @keyframes gowithsmooth {
     from {
       background: white;
 
     }
+
     to {
       background: transparent;
-      
+
     }
   }
 
@@ -147,157 +155,162 @@
   /* Keyframes end */
 
 
-  .backForward{
-    position:absolute; 
+  .backForward {
+    position: absolute;
     width: 100px;
     height: 70px;
     border-radius: 50px;
-    display:flex;
+    display: flex;
     justify-content: space-around;
     align-items: center;
-    top:320px; 
-    right:10px;
-    cursor:pointer
+    top: 320px;
+    right: 10px;
+    cursor: pointer
   }
- 
-  .containinput:hover .underinput{
+
+  .containinput:hover .underinput {
     animation: changeColor2 2s forwards ease;
   }
 
 
   .containinput:hover .input {
-     border-bottom: none
+    border-bottom: none
   }
+
   .but:hover .underbut {
     animation: changeColor 2s forwards ease;
   }
 
-  .containbut:hover .but{
+  .containbut:hover .but {
     color: rgb(238, 168, 56);
   }
 
-  .containbut{
+  .containbut {
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
-    display:flex;
-    width:43.33%;
+    display: flex;
+    width: 43.33%;
   }
 
- 
-  .slidetitleplay{
+
+  .slidetitleplay {
     position: absolute;
     z-index: 2;
     width: 40%;
     height: 160px;
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
-    display:flex;
-    right:0px;
-    top:15%;
-    display:inline-block
+    display: flex;
+    right: 0px;
+    top: 15%;
+    display: inline-block
   }
 
-  .wave{
+  .wave {
     position: absolute;
-    top:0; 
-    left:10px;
+    top: 0;
+    left: 10px;
     width: 70%;
     height: 70%;
     clip-path: circle(50% at 50% 50%);
     animation: waveAnimation 4s linear infinite;
-    display:flex;
+    display: flex;
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
-  
+
   }
 
- /*  .but:hover{
+  /*  .but:hover{
     color: rgb(173, 110, 7);
     transition:linear;
     border-bottom: solid;
     border-bottom-color:rgb(173, 110, 7) ;
   } */
 
-  .but:hover{
-    color: rgb(238, 168, 56) ;
+  .but:hover {
+    color: rgb(238, 168, 56);
   }
-  .play{
+
+  .play {
     width: 70%;
   }
-  .booknow{
+
+  .booknow {
     width: 150px;
-    height:50px;
+    height: 50px;
     border-radius: 5px;
     background-color: rgb(251, 159, 11);
     color: white;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    display:flex;
-    border:none; 
+    display: flex;
+    border: none;
     font-size: 16px;
     font-weight: bold;
   }
-  
-  .booknow:hover{
+
+  .booknow:hover {
     background-color: rgb(248, 197, 114);
     transition: ease;
   }
 
-  .selectlang{
+  .selectlang {
     background: transparent;
     border: transparent;
-    color:rgb(0, 0, 0);
-    width:33.33;
-  }
-  .lang{
-    color:black
+    color: rgb(0, 0, 0);
+    width: 33.33;
   }
 
-  .account{
-    background-image: url('../img/user.png'); 
-    background-size:cover ;
+  .lang {
+    color: black
+  }
+
+  .account {
+    background-image: url('../img/user.png');
+    background-size: cover;
     width: 40px;
     height: 40px;
     border-radius: 40px;
     border: none;
   }
 
-  .headercontainer{
-   display:none;
-  }
-
-  .headercontainer .logo1{
+  .headercontainer {
     display: none;
   }
-  
 
-  .butlistone{
+  .headercontainer .logo1 {
+    display: none;
+  }
+
+
+  .butlistone {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    display:flex;
+    display: flex;
     width: 50%;
     font-size: 30px;
     height: 75px;
     font-weight: 200;
   }
-  .but{
+
+  .but {
     background: transparent;
     border: none;
     width: 100%;
     font-size: 17px;
-    color:rgb(255, 255, 255)
+    color: rgb(255, 255, 255)
   }
 
-  .containmobileheader{
-    position:fixed; 
-    top:0px; 
+  .containmobileheader {
+    position: fixed;
+    top: 0px;
     z-index: 3;
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
@@ -305,158 +318,162 @@
     background-color: white;
   }
 
-  .containmobileheader  .selectlang{
-    color:black;
+  .containmobileheader .selectlang {
+    color: black;
     font-weight: normal;
-  } 
-
-  .headercontaineractive{
- 
-   display: none;
   }
-  .headercontaineractive .logo2{
+
+  .headercontaineractive {
+
     display: none;
   }
-  .headercontaineractive .selectlang{
-    color:black;
+
+  .headercontaineractive .logo2 {
+    display: none;
+  }
+
+  .headercontaineractive .selectlang {
+    color: black;
     font-weight: normal;
-  } 
+  }
 
   .headercontaineractive .but {
-    color:black;
+    color: black;
     font-weight: normal;
   }
-  .subSubOne{
-    display:none;
+
+  .subSubOne {
+    display: none;
   }
 
-  .subOne{
+  .subOne {
     width: 25%;
   }
 
-  .slidetitle4{
-    position:absolute; 
+  .slidetitle4 {
+    position: absolute;
     flex-direction: row;
     justify-content: space-around;
     width: 75%;
-    color:white;
+    color: white;
     margin-top: 30%;
     align-items: center;
-    display:flex;
+    display: flex;
     overflow: hidden;
   }
+
   /* button right */
-  .slidetitle3right{
-     display: none;
+  .slidetitle3right {
+    display: none;
   }
 
-  .slidetitle3rightactive{
-    position:absolute; 
+  .slidetitle3rightactive {
+    position: absolute;
     width: 50px;
     right: 4%;
     height: 50px;
     border-radius: 50px;
-    border:solid 2px;
+    border: solid 2px;
     border-color: rgb(236, 159, 6);
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    animation: goBack1 1s forwards ease ;
+    animation: goBack1 1s forwards ease;
     overflow: hidden;
   }
 
 
   /* Button left */
-  .slidetitle3{
+  .slidetitle3 {
     display: none;
   }
 
-  .slidetitle3active{
-    position:absolute; 
+  .slidetitle3active {
+    position: absolute;
     width: 50px;
     left: 4%;
     height: 50px;
     border-radius: 50px;
-    border:solid 2px;
-    display:flex;
+    border: solid 2px;
+    display: flex;
     justify-content: center;
     align-items: center;
     border-color: rgb(236, 159, 6);
-    animation: goBack1 1s forwards ease ;
+    animation: goBack1 1s forwards ease;
   }
-  
-  .slidetitle2{
-    position:absolute;
+
+  .slidetitle2 {
+    position: absolute;
     z-index: 2;
-    top:320px;
+    top: 320px;
     font-size: 13px;
     font-weight: normal;
     left: 40px;
     transform: translateX(5px);
   }
-  
-  
-  .slidetitle{
-    position:absolute;
+
+
+  .slidetitle {
+    position: absolute;
     z-index: 2;
     margin-top: 30%;
     font-size: 13px;
     animation: moveToRight 5s forwards ease;
-  
-  }
-  
-  .slidercontainer{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    
+
   }
 
-  .logofacebook{
+  .slidercontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+  }
+
+  .logofacebook {
     width: 100%;
- 
+
   }
 
-  .logoinstagram{
+  .logoinstagram {
     width: 100%;
-   
+
   }
 
-  .subtitlelogo{
+  .subtitlelogo {
     display: flex;
     flex-direction: column;
-    top:333px;
-    left:150px;
+    top: 333px;
+    left: 150px;
     width: 5%;
     height: 200px;
     z-index: 2;
     position: absolute;
   }
-  
-  .slider1{
+
+  .slider1 {
     display: flex;
     flex-direction: row;
     width: 100%;
-  
+
     font-weight: 200;
-    color:white
+    color: white
   }
-  
-  .img0{
-   
-      /*  background-image: url('../img/8.png'); */
-       background-size:cover ;
-       animation: movetonext 20s infinite ease , changeBackgroundimg0 80s infinite ease ;
-       z-index: 0;
-       height: 500px;
+
+  .img0 {
+
+    /*  background-image: url('../img/8.png'); */
+    background-size: cover;
+    animation: movetonext 20s infinite ease, changeBackgroundimg0 80s infinite ease;
+    z-index: 0;
+    height: 500px;
   }
-  
-  .img1{
-   /*  background-image: url('../img/8.png'); */
-    background-size:cover ;
-    animation: movetonext 20s infinite ease , changeBackground 80s infinite ease ;
+
+  .img1 {
+    /*  background-image: url('../img/8.png'); */
+    background-size: cover;
+    animation: movetonext 20s infinite ease, changeBackground 80s infinite ease;
     z-index: 0;
     height: 500px;
   }
@@ -466,28 +483,28 @@
 
 
 
-@media only screen and (min-width:768px) and (max-width: 1099px){
+@media only screen and (min-width:768px) and (max-width: 1099px) {
 
 
   @keyframes movetonext {
     from {
       transform: scale(2);
     }
-  
-    to{
+
+    to {
       transform: scale(1.5)
     }
   }
-  
-  
+
+
   @keyframes moveToRight {
     0% {
       transform: translateX(10%);
-      opacity:0.2
+      opacity: 0.2
     }
-  
-    100%{
-      transform: translateX(100px); 
+
+    100% {
+      transform: translateX(100px);
       opacity: 0.9;
     }
   }
@@ -495,11 +512,11 @@
   @keyframes slideOne {
     0% {
       transform: translateX(0px);
-      opacity:0.3
+      opacity: 0.3
     }
-  
-    100%{
-      transform: translateX(50px); 
+
+    100% {
+      transform: translateX(50px);
       opacity: 0.9;
     }
   }
@@ -507,39 +524,39 @@
 
   @keyframes changeBackground {
     0% {
-      background-image: url('../img/8.png');
+      background-image: url('../img/bullseye-gradient.png');
     }
 
     100% {
-      background-image: url('../img/4.png');
+      background-image: url('../img/bullseye-gradient.png');
     }
 
- 
   }
 
 
 
   @keyframes changeBackgroundimg0 {
     0% {
-      background-image: url('../img/4.png');
+      background-image: url('../img/bullseye-gradient.png');
     }
 
     100% {
-      background-image: url('../img/8.png');
+      background-image: url('../img/bullseye-gradient.png');
     }
 
- 
+
   }
 
- 
+
 
   @keyframes changeColor {
-    from{
+    from {
       background-color: rgb(238, 168, 56);
       width: 0%;
       height: 3px;
     }
-    to{
+
+    to {
       background-color: rgb(238, 168, 56);
       width: 100%;
       height: 3px;
@@ -547,13 +564,14 @@
   }
 
 
-  @keyframes changeColor2{
-    from{
+  @keyframes changeColor2 {
+    from {
       background-color: rgb(238, 168, 56);
       width: 0%;
       height: 2px;
     }
-    to{
+
+    to {
       background-color: rgb(238, 168, 56);
       width: 80%;
       height: 2px;
@@ -561,55 +579,61 @@
   }
 
   @keyframes waveAnimation {
-    0% , 100% {
+
+    0%,
+    100% {
       transform: scale(1.2);
-       background-color: rgba(255,255, 255, 0.1);
+      background-color: rgba(255, 255, 255, 0.1);
     }
 
-    50%{
+    50% {
       transform: scale(0.8);
-      background-color: rgba(255,255, 255, 0.4);
+      background-color: rgba(255, 255, 255, 0.4);
     }
   }
 
-  @keyframes moveControlButtonToLeft{
-    from{
+  @keyframes moveControlButtonToLeft {
+    from {
       opacity: 0.1;
     }
-    to{
+
+    to {
       opacity: 0.9;
     }
   }
 
 
-  @keyframes goBack1{
-    from{
+  @keyframes goBack1 {
+    from {
       opacity: 0.9;
     }
-    to{
+
+    to {
       opacity: 0.1;
     }
   }
 
-  @keyframes comewithsmooth{
+  @keyframes comewithsmooth {
     from {
       background: transparent;
 
     }
+
     to {
       background: white;
-      
+
     }
   }
 
-  @keyframes gowithsmooth{
+  @keyframes gowithsmooth {
     from {
       background: white;
 
     }
+
     to {
       background: transparent;
-      
+
     }
   }
 
@@ -618,318 +642,327 @@
 
 
 
-  .backForward{
-    position:absolute; 
+  .backForward {
+    position: absolute;
     width: 100px;
     height: 70px;
     border-radius: 50px;
-    display:flex;
+    display: flex;
     justify-content: space-around;
     align-items: center;
-    top:310px; 
-    right:10px;
-    cursor:pointer
+    top: 310px;
+    right: 10px;
+    cursor: pointer
   }
- 
-  .containinput:hover .underinput{
+
+  .containinput:hover .underinput {
     animation: changeColor2 2s forwards ease;
   }
 
 
   .containinput:hover .input {
-     border-bottom: none
+    border-bottom: none
   }
+
   .but:hover .underbut {
     animation: changeColor 2s forwards ease;
   }
 
-  .containbut:hover .but{
+  .containbut:hover .but {
     color: rgb(238, 168, 56);
   }
 
-  .containbut{
+  .containbut {
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
-    display:flex;
-    width:43.33%;
+    display: flex;
+    width: 43.33%;
   }
 
- 
-  .slidetitleplay{
+
+  .slidetitleplay {
     position: absolute;
     z-index: 2;
     width: 20%;
     height: 150px;
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
-    display:flex;
-    right:0px;
-    top:15%;
-    display:inline-block
+    display: flex;
+    right: 0px;
+    top: 15%;
+    display: inline-block
   }
 
-  .wave{
+  .wave {
     position: absolute;
-    top:0; 
-    left:10px;
+    top: 0;
+    left: 10px;
     width: 70%;
     height: 70%;
     clip-path: circle(50% at 50% 50%);
     animation: waveAnimation 4s linear infinite;
-    display:flex;
+    display: flex;
     flex-direction: column;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
-  
+
   }
 
- /*  .but:hover{
+  /*  .but:hover{
     color: rgb(173, 110, 7);
     transition:linear;
     border-bottom: solid;
     border-bottom-color:rgb(173, 110, 7) ;
   } */
 
-  .but:hover{
-    color: rgb(238, 168, 56) ;
+  .but:hover {
+    color: rgb(238, 168, 56);
   }
-  .play{
+
+  .play {
     width: 90%;
   }
-  .booknow{
+
+  .booknow {
     width: 150px;
-    height:50px;
+    height: 50px;
     border-radius: 5px;
     background-color: rgb(251, 159, 11);
     color: white;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    display:flex;
-    border:none; 
+    display: flex;
+    border: none;
     font-size: 16px;
     font-weight: bold;
   }
-  
-  .booknow:hover{
+
+  .booknow:hover {
     background-color: rgb(248, 197, 114);
     transition: ease;
   }
 
-  .selectlang{
+  .selectlang {
     background: transparent;
     border: transparent;
-    color:white;
-    width:33.33;
-  }
-  .lang{
-    color:black
+    color: white;
+    width: 33.33;
   }
 
-  .account{
-    background-image: url('../img/user.png'); 
-    background-size:cover ;
+  .lang {
+    color: black
+  }
+
+  .account {
+    background-image: url('../img/user.png');
+    background-size: cover;
     width: 40px;
     height: 40px;
     border-radius: 40px;
     border: none;
   }
 
-  .headercontainer{
+  .headercontainer {
     animation: gowithsmooth forwards 1s ease;
-    position:fixed; 
-    top:0px; 
+    position: fixed;
+    top: 0px;
     z-index: 4;
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
     align-items: center;
-    display:flex;
+    display: flex;
   }
 
-  .headercontainer .logo1{
+  .headercontainer .logo1 {
     display: none;
   }
-  
 
-  .butlistone{
+
+  .butlistone {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    display:flex;
+    display: flex;
     width: 35%;
     font-size: 30px;
     height: 75px;
     font-weight: 200;
   }
-  .but{
+
+  .but {
     background: transparent;
     border: none;
     width: 100%;
     font-size: 17px;
-    color:rgb(255, 255, 255)
+    color: rgb(255, 255, 255)
   }
 
-  .headercontaineractive{
- 
-    position:fixed; 
-    top:0px; 
+  .headercontaineractive {
+
+    position: fixed;
+    top: 0px;
     z-index: 3;
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
     align-items: center;
-    display:flex;
+    display: flex;
     animation: comewithsmooth 1s forwards ease;
   }
-  .headercontaineractive .logo2{
+
+  .headercontaineractive .logo2 {
     display: none;
   }
-  .headercontaineractive .selectlang{
-    color:black;
+
+  .headercontaineractive .selectlang {
+    color: black;
     font-weight: normal;
-  } 
+  }
 
   .headercontaineractive .but {
-    color:black;
+    color: black;
     font-weight: normal;
   }
-  .subSubOne{
-   display: none;
+
+  .subSubOne {
+    display: none;
   }
 
-  .subOne{
+  .subOne {
     width: 25%;
   }
 
-  .slidetitle4{
-    position:absolute; 
+  .slidetitle4 {
+    position: absolute;
     flex-direction: row;
     justify-content: space-around;
     width: 75%;
-    color:white;
+    color: white;
     margin-top: 30%;
     align-items: center;
-    display:flex;
+    display: flex;
     overflow: hidden;
   }
+
   /* button right */
-  .slidetitle3right{
-    display:none
+  .slidetitle3right {
+    display: none
   }
 
-  .slidetitle3rightactive{
-    position:absolute; 
+  .slidetitle3rightactive {
+    position: absolute;
     width: 50px;
     right: 4%;
     height: 50px;
     border-radius: 50px;
-    border:solid 2px;
+    border: solid 2px;
     border-color: rgb(236, 159, 6);
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    animation: goBack1 1s forwards ease ;
+    animation: goBack1 1s forwards ease;
     overflow: hidden;
   }
 
-  .containmobileheader{
+  .containmobileheader {
     display: none;
   }
 
   /* Button left */
-  .slidetitle3{
-    display:none
+  .slidetitle3 {
+    display: none
   }
 
-  .slidetitle3active{
-    position:absolute; 
+  .slidetitle3active {
+    position: absolute;
     width: 50px;
     left: 4%;
     height: 50px;
     border-radius: 50px;
-    border:solid 2px;
-    display:flex;
+    border: solid 2px;
+    display: flex;
     justify-content: center;
     align-items: center;
     border-color: rgb(236, 159, 6);
-    animation: goBack1 1s forwards ease ;
+    animation: goBack1 1s forwards ease;
   }
-  
-  .slidetitle2{
-    position:absolute;
-    z-index: 2; 
-    top:310px;
+
+  .slidetitle2 {
+    position: absolute;
+    z-index: 2;
+    top: 310px;
     font-size: 15px;
     font-weight: normal;
     left: 40px;
     transform: translateX(5px);
   }
-  
-  
-  .slidetitle{
-    position:absolute;
+
+
+  .slidetitle {
+    position: absolute;
     z-index: 2;
     margin-top: 15%;
     font-size: 27px;
     animation: moveToRight 5s forwards ease;
-  
-  }
-  
-  .slidercontainer{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    
+
   }
 
-  .logofacebook{
+  .slidercontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+  }
+
+  .logofacebook {
     width: 100%;
- 
+
   }
 
-  .logoinstagram{
+  .logoinstagram {
     width: 100%;
-   
+
   }
 
-  .subtitlelogo{
+  .subtitlelogo {
     display: flex;
     flex-direction: column;
-    top:330px;
-    left:160px;
+    top: 330px;
+    left: 160px;
     width: 5%;
     height: 200px;
     z-index: 2;
     position: absolute;
   }
-  
-  .slider1{
+
+  .slider1 {
     display: flex;
     flex-direction: row;
     width: 100%;
-  
+
     font-weight: 200;
-    color:white
+    color: white
   }
-  
-  .img0{
-   
-      /*  background-image: url('../img/8.png'); */
-       background-size:cover ;
-       animation: movetonext 20s infinite ease , changeBackgroundimg0 80s infinite ease ;
-       z-index: 0;
-       height: 500px;
+
+  .img0 {
+
+    /*  background-image: url('../img/8.png'); */
+    background-size: cover;
+    animation: movetonext 20s infinite ease, changeBackgroundimg0 80s infinite ease;
+    z-index: 0;
+    height: 500px;
   }
-  
-  .img1{
-   /*  background-image: url('../img/8.png'); */
-    background-size:cover ;
-    animation: movetonext 20s infinite ease , changeBackground 80s infinite ease ;
+
+  .img1 {
+    /*  background-image: url('../img/8.png'); */
+    background-size: cover;
+    animation: movetonext 20s infinite ease, changeBackground 80s infinite ease;
     z-index: 0;
     height: 500px;
   }
@@ -939,477 +972,494 @@
 
 
 
-@media only screen and (min-width: 1100px){
-    @keyframes movetonext {
-      from {
-        transform: scale(2);
-      }
-    
-      to{
-        transform: scale(1.5)
-      }
-    }
-    
-    
-    @keyframes moveToRight {
-      0% {
-        transform: translateX(10%);
-        opacity:0.2
-      }
-    
-      100%{
-        transform: translateX(400px); 
-        opacity: 0.9;
-      }
+@media only screen and (min-width: 1100px) {
+  @keyframes movetonext {
+    from {
+      transform: scale(2);
     }
 
-    @keyframes slideOne {
-      0% {
-        transform: translateX(0px);
-        opacity:0.3
-      }
-    
-      100%{
-        transform: translateX(100px); 
-        opacity: 0.9;
-      }
+    to {
+      transform: scale(1.5)
+    }
+  }
+
+
+  @keyframes moveToRight {
+    0% {
+      transform: translateX(10%);
+      opacity: 0.2
     }
 
+    100% {
+      transform: translateX(400px);
+      opacity: 0.9;
+    }
+  }
 
-    @keyframes changeBackground {
-      0% {
-        background-image: url('../img/8.png');
-      }
+  @keyframes slideOne {
+    0% {
+      transform: translateX(0px);
+      opacity: 0.3
+    }
 
-      100% {
-        background-image: url('../img/4.png');
-      }
+    100% {
+      transform: translateX(100px);
+      opacity: 0.9;
+    }
+  }
 
-   
+
+  @keyframes changeBackground {
+    0% {
+      background-image: url('../img/bullseye-gradient.png');
+    }
+
+    100% {
+      background-image: url('../img/bullseye-gradient.png');
     }
 
 
+  }
 
-    @keyframes changeBackgroundimg0 {
-      0% {
-        background-image: url('../img/4.png');
-      }
 
-      100% {
-        background-image: url('../img/8.png');
-      }
 
-   
+  @keyframes changeBackgroundimg0 {
+    0% {
+      background-image: url('../img/bullseye-gradient.png');
     }
 
-   
-
-    @keyframes changeColor {
-      from{
-        background-color: rgb(238, 168, 56);
-        width: 0%;
-        height: 3px;
-      }
-      to{
-        background-color: rgb(238, 168, 56);
-        width: 100%;
-        height: 3px;
-      }
+    100% {
+      background-image: url('../img/bullseye-gradient.png');
     }
 
 
-    @keyframes changeColor2{
-      from{
-        background-color: rgb(238, 168, 56);
-        width: 0%;
-        height: 2px;
-      }
-      to{
-        background-color: rgb(238, 168, 56);
-        width: 80%;
-        height: 2px;
-      }
+  }
+
+
+
+  @keyframes changeColor {
+    from {
+      background-color: rgb(238, 168, 56);
+      width: 0%;
+      height: 3px;
     }
 
-    @keyframes waveAnimation {
-      0% , 100% {
-        transform: scale(1.2);
-         background-color: rgba(255,255, 255, 0.1);
-      }
+    to {
+      background-color: rgb(238, 168, 56);
+      width: 100%;
+      height: 3px;
+    }
+  }
 
-      50%{
-        transform: scale(0.8);
-        background-color: rgba(255,255, 255, 0.4);
-      }
+
+  @keyframes changeColor2 {
+    from {
+      background-color: rgb(238, 168, 56);
+      width: 0%;
+      height: 2px;
     }
 
-    @keyframes moveControlButtonToLeft{
-      from{
-        opacity: 0.1;
-      }
-      to{
-        opacity: 0.9;
-      }
+    to {
+      background-color: rgb(238, 168, 56);
+      width: 80%;
+      height: 2px;
+    }
+  }
+
+  @keyframes waveAnimation {
+
+    0%,
+    100% {
+      transform: scale(1.2);
+      background-color: rgba(255, 255, 255, 0.1);
     }
 
+    50% {
+      transform: scale(0.8);
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  }
 
-    @keyframes goBack1{
-      from{
-        opacity: 0.9;
-      }
-      to{
-        opacity: 0.1;
-      }
+  @keyframes moveControlButtonToLeft {
+    from {
+      opacity: 0.1;
     }
 
-    @keyframes comewithsmooth{
-      from {
-        background: transparent;
+    to {
+      opacity: 0.9;
+    }
+  }
 
-      }
-      to {
-        background: white;
-        
-      }
+
+  @keyframes goBack1 {
+    from {
+      opacity: 0.9;
     }
 
-    @keyframes gowithsmooth{
-      from {
-        background: white;
+    to {
+      opacity: 0.1;
+    }
+  }
 
-      }
-      to {
-        background: transparent;
-        
-      }
+  @keyframes comewithsmooth {
+    from {
+      background: transparent;
+
     }
 
+    to {
+      background: white;
 
-    /* Keyframes end */
-   
-    .containinput:hover .underinput{
-      animation: changeColor2 2s forwards ease;
+    }
+  }
+
+  @keyframes gowithsmooth {
+    from {
+      background: white;
+
     }
 
+    to {
+      background: transparent;
 
-    .containinput:hover .input {
-       border-bottom: none
     }
-    .but:hover .underbut {
-      animation: changeColor 2s forwards ease;
-    }
+  }
 
-    .containbut:hover .but{
-      color: rgb(238, 168, 56);
-    }
 
-    .containbut{
-      flex-direction: column;
-      justify-content:center;
-      align-items: center;
-      display:flex;
-      width:43.33%;
-    }
+  /* Keyframes end */
 
-   
-    .slidetitleplay{
-      position: absolute;
-      width: 20%;
-      height: 200px;
-      z-index: 2;
-      right:2%;
-      top:25%;
-      display:inline-block
-    }
+  .containinput:hover .underinput {
+    animation: changeColor2 2s forwards ease;
+  }
 
-    .wave{
-      position: absolute;
-      top:0; 
-      left:5%;
-      display:flex;
 
-      flex-direction: column;
-      justify-content:center;
-      align-items: center;
-      width: 100px;
-      height: 100px;
-      clip-path: circle(32% at 50% 50%);
-      animation: waveAnimation 4s linear infinite;
-    }
+  .containinput:hover .input {
+    border-bottom: none
+  }
 
-   /*  .but:hover{
+  .but:hover .underbut {
+    animation: changeColor 2s forwards ease;
+  }
+
+  .containbut:hover .but {
+    color: rgb(238, 168, 56);
+  }
+
+  .containbut {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 43.33%;
+  }
+
+
+  .slidetitleplay {
+    position: absolute;
+    width: 20%;
+    height: 200px;
+    z-index: 2;
+    right: 2%;
+    top: 25%;
+    display: inline-block
+  }
+
+  .wave {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    clip-path: circle(32% at 50% 50%);
+    animation: waveAnimation 4s linear infinite;
+  }
+
+  /*  .but:hover{
       color: rgb(173, 110, 7);
       transition:linear;
       border-bottom: solid;
       border-bottom-color:rgb(173, 110, 7) ;
     } */
 
-    .but:hover{
-      color: rgb(238, 168, 56) ;
-    }
-    .play{
-      width: 50%;
-    }
-    .booknow{
-      width: 150px;
-      height:50px;
-      border-radius: 5px;
-      background-color: rgb(251, 159, 11);
-      color: white;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-      display:flex;
-      border:none; 
-      font-size: 16px;
-      font-weight: bold;
-    }
-    
-    .booknow:hover{
-      background-color: rgb(248, 197, 114);
-      transition: ease;
-    }
+  .but:hover {
+    color: rgb(238, 168, 56);
+  }
 
-    .selectlang{
-      background: transparent;
-      border: transparent;
-      color:white;
-      width:33.33;
-    }
-    .lang{
-      color:black
-    }
+  .play {
+    width: 50%;
+  }
 
-    .account{
-      background-image: url('../img/user.png'); 
-      background-size:cover ;
-      width: 40px;
-      height: 40px;
-      border-radius: 40px;
-      border: none;
-    }
+  .booknow {
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: rgb(251, 159, 11);
+    color: white;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+  }
 
-    .headercontainer{
-      animation: gowithsmooth forwards 1s ease;
-      position:fixed; 
-      top:0px; 
-      z-index: 4;
-      flex-direction: row;
-      justify-content: space-around;
-      width: 100%;
-      align-items: center;
-      display:flex;
-    }
+  .booknow:hover {
+    background-color: rgb(248, 197, 114);
+    transition: ease;
+  }
 
-    .headercontainer .logo1{
-      display: none;
-    }
-    
+  .selectlang {
+    background: transparent;
+    border: transparent;
+    color: white;
+    width: 33.33;
+  }
 
-    .butlistone{
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      display:flex;
-      width: 25%;
-      font-size: 30px;
-      height: 75px;
-      font-weight: 200;
-    }
-    .but{
-      background: transparent;
-      border: none;
-      width: 100%;
-      font-size: 17px;
-      color:rgb(255, 255, 255)
-    }
+  .lang {
+    color: black
+  }
 
-    .headercontaineractive{
-   
-      position:fixed; 
-      top:0px; 
-      z-index: 3;
-      flex-direction: row;
-      justify-content: space-around;
-      width: 100%;
-      align-items: center;
-      display:flex;
-      animation: comewithsmooth 1s forwards ease;
-    }
-    .headercontaineractive .logo2{
-      display: none;
-    }
-    .headercontaineractive .selectlang{
-      color:black;
-      font-weight: normal;
-    } 
+  .account {
+    background-image: url('../img/user.png');
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    border: none;
+  }
 
-    .headercontaineractive .but {
-      color:black;
-      font-weight: normal;
-    }
-    .subSubOne{
-      animation: slideOne 2s forwards ease;
-      font-size: 20px;
-      font-weight: bold;
-    }
+  .headercontainer {
+    animation: gowithsmooth forwards 1s ease;
+    position: fixed;
+    top: 0px;
+    z-index: 4;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    display: flex;
+  }
 
-    .subOne{
-      width: 25%;
-    }
-
-    .slidetitle4{
-      position:absolute; 
-      flex-direction: row;
-      justify-content: space-around;
-      width: 75%;
-      color:white;
-      margin-top: 30%;
-      align-items: center;
-      display:flex;
-      overflow: hidden;
-    }
-    /* button right */
-    .slidetitle3right{
-      position:absolute; 
-      width: 50px;
-      right: 4%;
-      cursor: pointer;
-      height: 50px;
-      border-radius: 50px;
-      border:solid 2px;
-      border-color: rgb(236, 159, 6);
-      display:flex;
-      justify-content: center;
-      align-items: center;
-      animation: moveControlButtonToLeft 1s forwards ease ;
-    }
-
-    .containmobileheader{
-      display: none;
-    }
-  
-
-    .slidetitle3rightactive{
-      position:absolute; 
-      width: 50px;
-      right: 4%;
-      height: 50px;
-      border-radius: 50px;
-      border:solid 2px;
-      border-color: rgb(236, 159, 6);
-      display:flex;
-      justify-content: center;
-      align-items: center;
-      animation: goBack1 1s forwards ease ;
-      overflow: hidden;
-      z-index: 3;
-    }
+  .headercontainer .logo1 {
+    display: none;
+  }
 
 
-    /* Button left */
-    .slidetitle3{
-      position:absolute; 
-      width: 50px;
-      left: 4%;
-       cursor: pointer;
-      height: 50px;
-      border-radius: 50px;
-      border:solid 2px;
-      display:flex;
-      justify-content: center;
-      align-items: center;
-      border-color: rgb(236, 159, 6);
-      animation: moveControlButtonToLeft 1s forwards ease ;
-    }
+  .butlistone {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    width: 25%;
+    font-size: 30px;
+    height: 75px;
+    font-weight: 200;
+  }
 
-    .slidetitle3active{
-      position:absolute; 
-      width: 50px;
-      left: 4%;
-      height: 50px;
-      border-radius: 50px;
-      border:solid 2px;
-      display:flex;
-      justify-content: center;
-      align-items: center;
-      border-color: rgb(236, 159, 6);
-      animation: goBack1 1s forwards ease ;
-    }
-    
-    .slidetitle2{
-      position:absolute;
-      z-index: 2;
-      margin-top: 30%;
-      font-size: 25px;
-      font-weight: normal;
-      left: 200px;
-      transform: translateX(5px);
-    }
-    
-    
-    .slidetitle{
-      position:absolute;
-      z-index: 2;
-      margin-top: 15%;
-      font-size: 40px;
-      animation: moveToRight 15s infinite ease;
-    
-    }
-    
-    .slidercontainer{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-      
-    }
+  .but {
+    background: transparent;
+    border: none;
+    width: 100%;
+    font-size: 17px;
+    color: rgb(255, 255, 255)
+  }
 
-    .logofacebook{
-      width: 100%;
-   
-    }
+  .headercontaineractive {
 
-    .logoinstagram{
-      width: 100%;
-     
-    }
+    position: fixed;
+    top: 0px;
+    z-index: 3;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    animation: comewithsmooth 1s forwards ease;
+  }
 
-    .subtitlelogo{
-      display: flex;
-      flex-direction: column;
-      top:85%;
-      left:30px;
-      width: 10%;
-      height: 200px;
-      z-index: 2;
-      position: absolute;
-    }
-    
-    .slider1{
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-    
-      font-weight: 200;
-      color:white
-    }
-    
-    .img0{
-     
-        /*  background-image: url('../img/8.png'); */
-         background-size:cover ;
-         animation: movetonext 20s infinite ease , changeBackgroundimg0 80s infinite ease ;
-         z-index: 0;
-         height: 1000px;
-    }
-    
-    .img1{
-     /*  background-image: url('../img/8.png'); */
-      background-size:cover ;
-      animation: movetonext 20s infinite ease , changeBackground 80s infinite ease ;
-      z-index: 0;
-      height: 1000px;
-    }
+  .headercontaineractive .logo2 {
+    display: none;
+  }
+
+  .headercontaineractive .selectlang {
+    color: black;
+    font-weight: normal;
+  }
+
+  .headercontaineractive .but {
+    color: black;
+    font-weight: normal;
+  }
+
+  .subSubOne {
+    animation: slideOne 2s forwards ease;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .subOne {
+    width: 25%;
+  }
+
+  .slidetitle4 {
+    position: absolute;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 75%;
+    color: white;
+    margin-top: 30%;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+  }
+
+  /* button right */
+  .slidetitle3right {
+    position: absolute;
+    width: 50px;
+    right: 4%;
+    cursor: pointer;
+    height: 50px;
+    border-radius: 50px;
+    border: solid 2px;
+    border-color: rgb(236, 159, 6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: moveControlButtonToLeft 1s forwards ease;
+  }
+
+  .containmobileheader {
+    display: none;
+  }
+
+
+  .slidetitle3rightactive {
+    position: absolute;
+    width: 50px;
+    right: 4%;
+    height: 50px;
+    border-radius: 50px;
+    border: solid 2px;
+    border-color: rgb(236, 159, 6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: goBack1 1s forwards ease;
+    overflow: hidden;
+    z-index: 3;
+  }
+
+
+  /* Button left */
+  .slidetitle3 {
+    position: absolute;
+    width: 50px;
+    left: 4%;
+    cursor: pointer;
+    height: 50px;
+    border-radius: 50px;
+    border: solid 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: rgb(236, 159, 6);
+    animation: moveControlButtonToLeft 1s forwards ease;
+  }
+
+  .slidetitle3active {
+    position: absolute;
+    width: 50px;
+    left: 4%;
+    height: 50px;
+    border-radius: 50px;
+    border: solid 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: rgb(236, 159, 6);
+    animation: goBack1 1s forwards ease;
+  }
+
+  .slidetitle2 {
+    position: absolute;
+    z-index: 2;
+    margin-top: 30%;
+    font-size: 25px;
+    font-weight: normal;
+    left: 200px;
+    transform: translateX(5px);
+  }
+
+
+  .slidetitle {
+    position: absolute;
+    z-index: 2;
+    margin-top: 15%;
+    font-size: 40px;
+    animation: moveToRight 15s infinite ease;
+
+  }
+
+  .slidercontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+  }
+
+  .logofacebook {
+    width: 100%;
+
+  }
+
+  .logoinstagram {
+    width: 100%;
+
+  }
+
+  .subtitlelogo {
+    display: flex;
+    flex-direction: column;
+    top: 85%;
+    left: 30px;
+    width: 10%;
+    height: 200px;
+    z-index: 2;
+    position: absolute;
+  }
+
+  .slider1 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    font-weight: 200;
+    color: white
+  }
+
+  .img0 {
+
+    /*  background-image: url('../img/8.png'); */
+    background-size: cover;
+    animation: movetonext 20s infinite ease, changeBackgroundimg0 80s infinite ease;
+    z-index: 0;
+    height: 1000px;
+  }
+
+  .img1 {
+    /*  background-image: url('../img/8.png'); */
+    background-size: cover;
+    animation: movetonext 20s infinite ease, changeBackground 80s infinite ease;
+    z-index: 0;
+    height: 1000px;
+  }
 }
