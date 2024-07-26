@@ -120,9 +120,13 @@ export default function Carousel() {
       </div>
       <div className='slider1'>
         <div className='slidetitle'>
-          <p style={{ fontSize: '15px', fontWeight: "bold" }} className=''>
-            Meilleurs cartes
-          </p>
+          {isDesktop && (<p style={{ fontSize: '22px', fontWeight: "bold" }} className=''>
+            CryptoBit Card Store
+          </p>)}
+
+          {!isDesktop && (<p style={{ fontSize: '15px', fontWeight: "bold" }} className=''>
+            CryptoBit Card Store
+          </p>)}
           <h2 className=''>
             {description.split('\n').map((line, index) => (
               <React.Fragment key={index}>
@@ -153,10 +157,10 @@ export default function Carousel() {
           </div>
         </>
       )}
-      <div className='backForward'>
+      {!isDesktop && (<div className='backForward'>
         <ArrowBackIcon onClick={Prev} sx={{ color: 'rgb(236, 159, 6)', fontSize: '30px' }} />
         <ArrowForwardIcon onClick={Next} sx={{ color: 'rgb(236, 159, 6)', fontSize: '30px' }} />
-      </div>
+      </div>)}
       <div className='slidetitle4'></div>
       <div className='subtitlelogo'>
         <FacebookIcon sx={{ fontSize: '35px', color: 'rgb(255, 255, 255)', }} />
