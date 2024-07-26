@@ -4,6 +4,16 @@
 <style>
     #root {
         overflow-x: hidden;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+
+    body {
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+
+        font-style: normal;
     }
 </style>
 <div id="root"></div>

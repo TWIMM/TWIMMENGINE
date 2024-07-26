@@ -46,8 +46,10 @@ class __TwigTemplate_db58d2fbe3d845fd8946ef662b2f731f extends Template
   <link rel=\"icon\" type=\"image/x-icon\" href=\"Files/faviconsvg.svg\">
 
   <!-- Bootstrap CSS -->
-
-  <title>Swap Money</title>
+  <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">
+  <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>
+  <link href=\"https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap\" rel=\"stylesheet\">
+  <title>CryptoBit Card Store</title>
 </head>
 <style>
   body {
@@ -57,9 +59,9 @@ class __TwigTemplate_db58d2fbe3d845fd8946ef662b2f731f extends Template
 
 <body>
   ";
-        // line 21
+        // line 23
         yield from $this->unwrap()->yieldBlock('content', $context, $blocks);
-        // line 22
+        // line 24
         yield "  <!-- Optional JavaScript; choose one of the two! -->
   <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
 
@@ -69,7 +71,7 @@ class __TwigTemplate_db58d2fbe3d845fd8946ef662b2f731f extends Template
         return; yield '';
     }
 
-    // line 21
+    // line 23
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -89,7 +91,7 @@ class __TwigTemplate_db58d2fbe3d845fd8946ef662b2f731f extends Template
      */
     public function getDebugInfo()
     {
-        return array (  73 => 21,  63 => 22,  61 => 21,  39 => 1,);
+        return array (  75 => 23,  65 => 24,  63 => 23,  39 => 1,);
     }
 
     public function getSourceContext()
@@ -104,8 +106,10 @@ class __TwigTemplate_db58d2fbe3d845fd8946ef662b2f731f extends Template
   <link rel=\"icon\" type=\"image/x-icon\" href=\"Files/faviconsvg.svg\">
 
   <!-- Bootstrap CSS -->
-
-  <title>Swap Money</title>
+  <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">
+  <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>
+  <link href=\"https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap\" rel=\"stylesheet\">
+  <title>CryptoBit Card Store</title>
 </head>
 <style>
   body {
