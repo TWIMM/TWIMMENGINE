@@ -51,7 +51,7 @@ function Headerbutton() {
 
             <div className='containbut'>
                <button className='but' >
-                  About Us
+                  A propos
                   <div className='underbut'>
                   </div>
                </button>
@@ -60,7 +60,7 @@ function Headerbutton() {
 
             <div className='containbut'>
                <button className='but' >
-                  Rubriques
+                  FAQ
                   <div className='underbut'>
                   </div>
                </button>
@@ -82,7 +82,7 @@ function Headerbutton() {
          <div className='butlistone' >
 
             <button onClick={() => navigate('/destinations')} className='booknow' >
-               Destinations
+               Nos produits
                <SendSharpIcon />
             </button>
 

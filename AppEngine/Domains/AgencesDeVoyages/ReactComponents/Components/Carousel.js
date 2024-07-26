@@ -11,6 +11,8 @@ import Facebook from '../img/facebook.png'
 import Instagram from '../img/instagram.png'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import Headermobile from '../Mobilecomponents/Headermobile'
+import { gsap } from 'gsap';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 export default function Carousel() {
   const imageRef = useRef(null)
@@ -28,7 +30,28 @@ export default function Carousel() {
   const [slideClassName, setSlideClassName] = useState('img1')
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const playRef = useRef(null);
+  const shadowRef = useRef(null);
 
+  useEffect(() => {
+    const tl = gsap.timeline({ repeat: -1, yoyo: true });
+
+    tl.to(playRef.current, {
+      duration: 1,
+      y: -25,
+      ease: "power1.inOut"
+    })
+      .to(shadowRef.current, {
+        duration: 1,
+        width: '100px',
+        height: '15px',
+        ease: "power1.inOut"
+      }, '-=1');
+
+    return () => {
+      tl.kill();
+    };
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -110,7 +133,8 @@ export default function Carousel() {
           </h2>
         </div>
         <div className='slidetitleplay'>
-          <img className='play' src={Play} />
+          <img className='play' src={Play} ref={playRef} />
+
         </div>
         <div className='slidetitle2'>
           <h1 className=''>
@@ -135,7 +159,9 @@ export default function Carousel() {
       </div>
       <div className='slidetitle4'></div>
       <div className='subtitlelogo'>
-        <FacebookIcon sx={{ fontSize: '40px', color: 'rgb(255, 255, 255)' }} />
+        <FacebookIcon sx={{ fontSize: '35px', color: 'rgb(255, 255, 255)', }} />
+        <InstagramIcon sx={{ fontSize: '35px', color: 'rgb(255, 255, 255)' }} />
+
       </div>
     </div>
   )
